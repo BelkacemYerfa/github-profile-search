@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="scss/style.css">
+ <script defer src="JS/script.js"></script>
+ <title>Github Profile Search</title>
+</head>
+<body>
+
+  <section class="wrapper">
+     <div class="navMode">
+       <h1>
+        devfinder
+       </h1>
+       <button data-btn-background >
+         Dark
+         <img src="../GitHubUserSearchApp-main/assets/icon-moon.svg" class="Dark" alt="">
+         <img src="../GitHubUserSearchApp-main/assets/icon-sun.svg" class="Light" alt="">
+       </button>
+     </div>
+     <div class="searchForm">
+       <input type="text" id="UsernameInput" placeholder="Search Github UserName ... ">
+       <img src="../GitHubUserSearchApp-main/assets/icon-search.svg" alt="">
+       <button data-search-btn >
+         Search
+       </button>
+     </div>
+     <div class="UserStatus">
+        <div class="Top">
+           <img src="https://avatars.githubusercontent.com/u/583231?v=4" id="UserAvatar" alt="">
+           <div class="Info">
+             <h1 id="name">
+               The Octocat
+             </h1>
+             <p id="name2">
+               @octocat
+             </p>
+             <p id="bio"> 
+              This profile has no bio
+             </p>
+           </div>
+           <h3 id="JoinedDate">
+             Joined <span id="getDate">25</span> <span id="getMonth">Jan</span> <span id="getYear">2011</span>
+           </h3>
+        </div>
+        <div class="bottom">
+          <div class="UserData">
+             <div>
+              <h3>
+                Repos
+              </h3>
+              <p class="Public">
+                 0
+              </p>
+             </div>
+             <div>
+              <h3>
+                Followers
+              </h3>
+              <p class="Public">
+                 0
+              </p>
+             </div>
+             <div>
+              <h3>
+                Following
+              </h3>
+              <p class="Public">
+                 0
+              </p>
+             </div>
+          </div>
+          <div class="DataToShow">
+           <ul>
+             <p class="Data">
+               <img src="../GitHubUserSearchApp-main/assets/icon-location.svg" alt="">
+               <span class="RelatedData info-location">Not available </span>
+             </p>
+             <p class="Data">
+              <img src="../GitHubUserSearchApp-main/assets/icon-website.svg" alt="">
+              <span class="RelatedData info-website">Not available </span>
+            </p>
+            <p class="Data">
+              <img src="../GitHubUserSearchApp-main/assets/icon-twitter.svg" alt="">
+              <span class="RelatedData info-twitter">Not available </span>
+            </p>
+            <p class="Data">
+              <img src="../GitHubUserSearchApp-main/assets/icon-company.svg" alt="">
+              <span class="RelatedData info-company">Not available </span>
+            </p>
+           </ul>
+          </div>
+        </div>
+     </div>
+  </section>
+ 
+</body>
+</html>

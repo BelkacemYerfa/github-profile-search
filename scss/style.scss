@@ -1,0 +1,203 @@
+@import './functions';
+
+//code section
+
+body{
+  transition: background-color .25s linear ; 
+  @include CommonElements();
+  @include Sizing();
+  font-family: $fontFamily;
+  min-height: 100vh;
+  width: 100%;
+  @include Center(); 
+ .wrapper{
+  width: 100%;
+  padding-inline: 18%;
+  @media screen and (max-width:600px) {
+   padding-inline: 5% !important;
+  }
+  .navMode{
+   @media screen and (max-width:600px) {
+    h1{
+     font-size: 26px !important;
+    }
+   }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+     font-size: 30px;
+     color: getColor(two);
+    }
+    button{
+    @include MakeBtn();
+    font-size: 18px;
+    font-weight: 500;
+    color: getColor(two);
+    .Light{
+     display: none;
+    }
+   }
+  }
+  .searchForm{
+   @media screen and (max-width:600px){
+    input{
+     text-indent: 35px !important;
+    }
+    ::placeholder{
+     font-size: 16px !important;
+    }
+    button{
+     width: 90px !important;
+     font-size: 16px !important;
+     right: 2% !important;
+    }
+   }
+   position: relative;
+   display: flex;
+   align-items: center;
+   input{
+    @include MakeInput();
+    font-family: $fontFamily;
+    color: getColor(two);
+    text-indent: 60px;
+    font-size: 20px;
+    box-shadow: 0px 5px 5px hsla(217, 21%, 21%, 0.5);
+   }
+   img{
+    position: absolute;
+    left: 2.5%;
+   }
+   ::placeholder{
+    font-size: 20px;
+    color: getColor(two)
+   }
+   button{
+    position: absolute;
+    right: 1%;
+    @include MakeSearchBtn();
+    font-family: $fontFamily;
+    font-size: 20px;
+    transition: background-color .35s linear;
+    &:hover{
+     background-color: getBtnColor(two);
+    }
+   }
+  }
+  .UserStatus{
+   overflow: hidden;
+   @include MakeCard();
+   .Top{
+    position: relative;
+    @media screen and (max-width:1000px){
+     margin-inline: 20px !important;
+     grid-template-columns: repeat(2,1fr);
+     img{
+      height: 30% !important;
+     }
+     .Info{
+      h1{
+        font-size: 16px !important;
+      }
+     }
+     #JoinedDate{
+      position: absolute !important;
+      font-size: 16px !important;
+      left: 10px;
+      top: 35%;
+     }
+    }
+    margin-inline: 50px -20px;
+    padding-block: 35px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    img{
+     border-radius: 50% ;
+     height: 40%;
+     width: auto;
+    }
+    .Info{
+     h1{
+       font-size: 25px;
+     }
+     #name2{
+      color: getBtnColor(one);
+      font-size: 18px;
+      font-weight: 700;
+     }
+     #bio{
+      color: getColor(two);
+      font-size: 18px;
+     }
+    }
+    #JoinedDate{
+     color: getColor(three);
+     opacity: 0.75;
+     font-size: 18px;
+    }
+   }
+   .bottom{
+    @media screen and (max-width:1000px) {
+     width: 90% !important;
+     left: -5% !important;
+     .UserData,.DataToShow{
+      width: 90% !important;
+     }
+     .DataToShow{
+      ul{
+       column-gap: 50px !important;
+       row-gap: 10px !important;
+       p{
+        margin-block: 10px;
+       }
+      }
+     }
+    }
+    margin-inline: 50px 10px;
+    margin-top: -300px;
+    position: relative;
+    left: 30%;
+    .UserData{
+     @include MakeSpecialCard();
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 20px;
+      div{
+        h3{
+         color: getColor(two);
+         font-weight: 100;
+         font-size: 16px;
+        }
+      }
+    }
+    .DataToShow{ 
+     position: relative;
+     left: -7.5%;
+     width: 60%;
+     ul{
+      display: flex;
+      column-gap: 5px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .Data{
+       margin-inline: 20px ;
+       display: flex;
+       align-items: center;
+       img{
+        height: 25px;
+        width: auto;
+       }
+       .RelatedData{
+        margin-left: 5px;
+        color: #4b6a9b;
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
